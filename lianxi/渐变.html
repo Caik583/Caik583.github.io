@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="btn">
+    <span>button</span>
+    <div class="mask"></div>
+  </div>
+  <style>
+    .btn {
+      width: 200px;
+      height: 50px;
+      background-color: burlywood;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      z-index: 0;
+    }
+
+    .mask {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 50%;
+      background-color: lightseagreen;
+      z-index: -1;
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0);
+      transition: transform 1.8s, opacity 1s;
+    }
+
+    .btn:hover .mask {
+      opacity: 1;
+      transform: scale(5);
+    }
+  </style>
+  <script>
+    var mask = document.querySelector(".mask")
+    document.querySelector(".btn").onmousemove = function (event) {
+      mask.style.top = event.offsetY - 50 + "px"
+      mask.style.left = event.offsetX - 50 + "px"
+    }
+  </script>
+
+
+  <br>
+
+
+
+
+  <div class="boxx" title="xxx"></div>
+  <style>
+    .boxx {
+      width: 400px;
+      height: 200px;
+      border: 3px solid #000;
+      /* width: calc(100% - 20px); */
+      /* background: hsl(0, 100%, 90%); */
+      /* background: hsla(0, 100%, 50%, 0.5); */
+      /* background: transparent; */
+      /* background: linear-gradient(red, blue); */
+      /* background: linear-gradient(to top right, red, blue); */
+      /* background: linear-gradient( 45deg, red, blue); */
+      /* background: linear-gradient( 145deg, hsl(10, 61%, 81%), hsl(180, 78%, 75%)); */
+      /* background: linear-gradient(to right,
+          red 20%,
+          transparent 20%,
+          transparent 60%,
+          blue 60%),
+        linear-gradient(red 60%,
+          transparent 60%,
+          transparent 80%,
+          blue 80%); */
+      /* background: linear-gradient(red 20%, green 40%, blue 60%);   */
+
+
+
+      /* background: radial-gradient( circle at center,red, green); */
+      /* background: repeating-linear-gradient(45deg,
+          red 0px,
+          red 10px,
+          transparent 10px,
+          transparent 20px),
+        repeating-linear-gradient(-45deg,
+          red 0px,
+          red 10px,
+          transparent 10px,
+          transparent 20px); */
+      background: repeating-radial-gradient(circle at center,
+          blue 0px,
+          blue 5px,
+          transparent 5px,
+          transparent 20px),
+        repeating-radial-gradient(circle at 80%,
+          red 0px,
+          red 5px,
+          transparent 5px,
+          transparent 20px),
+        repeating-radial-gradient(circle at 20%,
+          red 0px,
+          red 5px,
+          transparent 5px,
+          transparent 20px),
+        repeating-radial-gradient(circle at top,
+          pink 0px,
+          pink 5px,
+          transparent 5px,
+          transparent 20px)
+    }
+
+    .box::after {
+      content: attr(title);
+    }
+  </style>
+
+
+
+  <br>
+
+
+  <div class="box2"></div>
+  <style>
+    .box2 {
+      width: 400px;
+      height: 400px;
+      background: repeating-radial-gradient(circle at top right,
+          pink 0px,
+          pink 10px,
+          transparent 10px,
+          transparent 20px),
+        repeating-linear-gradient(-45deg,
+          yellow 0px,
+          yellow 10px,
+          transparent 10px,
+          transparent 20px)
+    }
+    
+  
+  </style>
+
+</body>
+
+</html>

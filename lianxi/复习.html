@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="btn">xxx</div>
+  <style>
+    .btn {
+      width: 200px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ccc;
+      transform-origin: top center;
+    }
+
+    .btn:hover {
+      animation: mytexiao;
+      animation-duration: 0.8s;
+      animation-timing-function: linear;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    }
+
+    @keyframes mytexiao {
+      0% {
+        transform: skewX(0deg);
+      }
+
+      25% {
+        transform: skewX(-15deg);
+      }
+
+      50% {
+        transform: skewX(12deg);
+      }
+
+      75% {
+        transform: skewX(-9deg);
+      }
+
+      90% {
+        transform: skewX(5deg);
+      }
+
+      100% {
+        transform: skewX(0deg);
+      }
+    }
+  </style>
+
+  <br>
+
+
+
+  <div class="btn2">hello</div>
+  <style>
+    .btn2 {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: lightgreen;
+      cursor: pointer;
+    }
+
+    .btn2:hover {
+      animation: dong;
+      animation-duration: 0.8s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes dong {
+      from {
+        transform: translateX(0) translateY(0);
+      }
+
+      to {
+        transform: translateX(200px) translateY(0px);
+      }
+    }
+  </style>
+
+  <br>
+
+  <form action="" method="get">
+    <!--required 必填项--><!--placeholder 规定可描述输入字段预期值的简短的提示信息-->
+    <input type="text" placeholder="名字" required><br>
+    <!--disabled 禁用-->
+    <input type="text" value="123_5" disabled>
+    <section>
+      <input type="number" placeholder="数值" name="" min="-100" max="100" id="">
+    </section>
+
+    <section>
+      <span>
+        <input type="radio" name="danxuan" id="" checked>a
+      </span>
+      <span>
+         <input type="radio" name="danxuan" id="">b
+      </span>
+     
+    </section>
+
+    <section>
+      <input type="checkbox" name="fuxuan" id="">1
+      <input type="checkbox" name="fuxuan" id="">2
+      <input type="checkbox" name="fuxuan" id="">3
+    </section>
+
+    <input type="reset" value="重置">
+    <input type="submit" value="提交">
+  </form>
+  <style>
+    form {
+      max-width: 200px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+    input {
+      outline: none;
+    }
+    ::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      color: #909;
+    }
+    input[type="number"]{
+      width: 175px;
+    }
+    span{
+      margin-right: 20px;
+    }
+    input[type="checkbox"]{
+      width: 20%;
+    }
+    input:required {
+      background-color: lightyellow;
+    }
+
+    /* checked 选中状态 */
+    input:checked {
+      width: 30px;
+      height: 30px;
+    
+    }
+
+    /* 为所有 启用 的输入元素设置边框颜色 */
+    input:enabled {
+      border: 1px solid orange;
+    }
+
+    /*out-of-range 输入的值在指定区间外 */
+    input:out-of-range {
+      background: red;
+    }
+  </style>
+
+
+<br>
+
+  
+
+
+
+
+
+
+
+</body>
+
+</html>

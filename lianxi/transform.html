@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .card {
+      min-width: 200px;
+      height: 200px;
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0 3px 5px #cccccc;
+    }
+
+    .box {
+      display: inline-block;
+      margin: 20px auto;
+      background-color: #ccc;
+    }
+
+    .fill {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      opacity: 0.7;
+      transition: all 0.3s;
+    }
+
+
+
+    /* =========以旋转平面X，Y轴旋转=========== */
+    .rotate:hover .fill {
+      transform: rotate(45deg);
+    }
+
+    .rotateX:hover .fill {
+      transform: rotateX(45deg)
+    }
+
+    .rotateY:hover .fill {
+      transform: rotateY(45deg)
+    }
+
+    .rotateZ:hover .fill {
+      transform: rotateZ(45deg);
+    }
+
+    /* ==========延平面X,Y轴放大=========== */
+    .scale:hover .fill {
+      transform: scale(2);
+    }
+
+    .scaleX:hover .fill {
+      transform: scaleX(2);
+    }
+
+    .scaleY:hover .fill {
+      transform: scaleY(2);
+    }
+
+    /* ===========按照X,Y轴倾斜=========== */
+    .skew:hover .fill {
+      transform: skew(45deg, 45deg);
+    }
+
+    .skewX:hover .fill {
+      transform: skewX(45deg);
+    }
+
+    .skewY:hover .fill {
+      transform: skewY(45deg);
+    }
+
+    /* ============以平面X,Y轴偏移========== */
+    .translate:hover .fill {
+      transform: translate(45px, 45px);
+    }
+
+    .translateX:hover .fill {
+      transform: translateX(45px);
+    }
+
+    .translateY:hover .fill {
+      transform: translateY(45px);
+    }
+
+    /* =========定义 2D 转换，使用六个值的矩阵============== */
+    .matrix:hover .fill {
+      transform: matrix(2, 2, 0, 2, 45, 0);
+    }
+
+    /* ============为 3D 转换元素定义透视视图============= */
+    /* ============3D透视效果 ============= */
+    .perspective-100 {
+      perspective: 100px;
+    }
+
+    .rotateX.perspective-100:hover .fill {
+      transform: rotateX(90deg);
+    }
+
+    .rotateY.perspective-100:hover .fill {
+      transform: rotateY(90deg);
+    }
+
+    .perspective-200 {
+      perspective: 200px;
+    }
+
+    /* =================== */
+    .to-100-0-0 {
+      transform-origin: 100% 0 0;
+    }
+    .rotate:hover .fill {
+      transform: rotate(45deg);
+    }
+
+    .to-0-100-0 {
+      transform-origin: 0 100% 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS3 Transform</h1>
+  <div class="card">
+    <div class="box rotate">
+      <div class="fill"></div>
+    </div>
+    <p>rotate(45deg)</p>
+  </div>
+  <div class="card">
+    <div class="box rotateX">
+      <div class="fill"></div>
+    </div>
+    <p>rotateX(45deg)</p>
+  </div>
+  <div class="card">
+    <div class="box rotateY">
+      <div class="fill"></div>
+    </div>
+    <p>rotateY(45deg)</p>
+  </div>
+  <div class="card">
+    <div class="box rotateZ">
+      <div class="fill"></div>
+    </div>
+    <p>rotateZ(45deg)</p>
+  </div>
+  <div class="card">
+    <div class="box scale">
+      <div class="fill"></div>
+    </div>
+    <p>scale(2)</p>
+  </div>
+  <div class="card">
+    <div class="box scaleX">
+      <div class="fill"></div>
+    </div>
+    <p>scaleX(2)</p>
+  </div>
+  <div class="card">
+    <div class="box scaleY">
+      <div class="fill"></div>
+    </div>
+    <p>scaleY(2)</p>
+  </div>
+  <div class="card">
+    <div class="box skew">
+      <div class="fill"></div>
+    </div>
+    <p>skew(45deg,45deg)</p>
+  </div>
+  <div class="card">
+    <div class="box skewX">
+      <div class="fill"></div>
+    </div>
+    <p>skewX(45deg)</p>
+  </div>
+  <div class="card">
+    <div class="box skewY">
+      <div class="fill"></div>
+    </div>
+    <p>skewY(45deg)</p>
+  </div>
+  <div class="card">
+    <div class="box translate">
+      <div class="fill"></div>
+    </div>
+    <p>translate(45px,45px)</p>
+  </div>
+  <div class="card">
+    <div class="box translateX">
+      <div class="fill"></div>
+    </div>
+    <p>translateX(45px)</p>
+  </div>
+  <div class="card">
+    <div class="box translateY">
+      <div class="fill"></div>
+    </div>
+    <p>translateY(45px)</p>
+  </div>
+  <div class="card">
+    <div class="box matrix">
+      <div class="fill"></div>
+    </div>
+    <p>matrix(2, 2, 0, 2, 45, 0)</p>
+  </div>
+
+
+
+
+
+
+
+  <h1>xxxxxxxxx</h1>
+  <div class="card">
+    <div class="box rotateX perspective-100 ">
+      <div class="fill"></div>
+    </div>
+    <p>rotateX(90deg)</p>
+  </div>
+  <div class="card">
+    <div class="box rotateY perspective-100 ">
+      <div class="fill"></div>
+    </div>
+    <p>rotateY(90deg)</p>
+  </div>
+  <div class="card">
+    <div class="box rotateX perspective-200">
+      <div class="fill"></div>
+    </div>
+    <p>rotateX(45deg)</p>
+  </div>
+  <div class="card">
+    <div class="box rotateY perspective-200">
+      <div class="fill"></div>
+    </div>
+    <p>rotateY(45deg)</p>
+  </div>
+
+
+
+
+
+
+
+  <h1>Transform origin</h1>
+  <div class="card">
+    <div class="box rotate ">
+      <div class="fill to-100-0-0"></div>
+    </div>
+    <p>rotate(45deg)</p>
+  </div>
+  <div class="card">
+    <div class="box rotate ">
+      <div class="fill to-0-100-0"></div>
+    </div>
+    <p>rotate(45deg)</p>
+  </div>
+  <div class="card">
+    <div class="box rotateX perspective-100">
+      <div class="fill to-100-0-0"></div>
+    </div>
+    <p>rotateX(90deg)</p>
+  </div>
+  <div class="card">
+    <div class="box rotateX perspective-100">
+      <div class="fill to-0-100-0"></div>
+    </div>
+    <p>rotateX(90deg)</p>
+  </div>
+  
+  <div class="card">
+    <div class="box rotateY perspective-100">
+      <div class="fill to-100-0-0"></div>
+    </div>
+    <p>rotateY(90deg)</p>
+  </div>
+  <div class="card">
+    <div class="box rotateY perspective-100">
+      <div class="fill to-0-100-0"></div>
+    </div>
+    <p>rotateY(90deg)</p>
+  </div>
+  
+
+</body>
+
+</html>

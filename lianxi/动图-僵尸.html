@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="corpse"></div>
+  <style>
+    .corpse{
+      width: 200px;
+      height: 310px;
+      background: lightblue url("./img/walkingdead.png");
+      /* background-size: cover; */
+
+      animation-name: mycorpse;
+      animation-duration: 0.8s;
+      animation-timing-function: steps(10, start);
+      animation-iteration-count: infinite;
+    }
+    @keyframes mycorpse {
+      from{
+        background-position-x: 0px;
+      }
+      to{
+        background-position-x: -2000px;
+      }
+    }
+  </style>
+</body>
+</html>

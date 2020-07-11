@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    html {
+      height: 100%;
+    }
+
+    body {
+      height: 100%;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      perspective-origin: 50% 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cude {
+      width: 200px;
+      height: 200px;
+      /* background-color: lightcoral; */
+      background-size: cover;
+      transform-style: preserve-3d;
+      /* perspective: 400px; */
+      transform: rotateX(0deg) rotateY(0deg);
+      transition: all 1s;
+      position: relative;
+    }
+
+    .box {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .front {
+      background-color: lightgreen;
+      transform: translateZ(100px);
+    }
+
+    .behind {
+      background-color: lightsalmon;
+      transform: rotateY(180deg) translateZ(100px);
+    }
+
+    .left {
+      background-color: lightblue;
+      transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .right {
+      background-color: pink;
+      transform: rotateX(270deg) translateZ(100px);
+    }
+
+    .top {
+      background-color: lightyellow;
+      transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .bottom {
+      background-color: lightseagreen;
+      transform: rotateY(270deg) translateZ(100px);
+    }
+
+    /* .cude:hover{
+      transform: rotateY(180deg)
+    } */
+  </style>
+</head>
+
+<body>
+  <div class="cude">
+    <div class="box front">1</div>
+    <div class="box behind">6</div>
+    <div class="box left">2</div>
+    <div class="box right">5</div>
+    <div class="box top">4</div>
+    <div class="box bottom">3</div>
+  </div>
+
+  <script>
+    var bd = document.body
+    bd.onmousemove = function (event) {
+      // console.log(event.clientX, event.clientY);
+      // console.log(this);
+      
+    // this.style.backgroundColor= "rgb(100,"+event.clientX+", "+event.clientY+")"
+      this.style.perspectiveOrigin = event.clientX+ "px " + event.clientY+ "px";
+      // console.log(document.body.style.perspectiveOrigin);
+    }
+  </script>
+</body>
+
+</html>
