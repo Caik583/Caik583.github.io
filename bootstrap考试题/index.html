@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-  <title>Bootstrap 101 Template</title>
+  
+  <title>title</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,35 +18,31 @@
     href="http://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
     rel="stylesheet">
 
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-  <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-  <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-  <!--[if lt IE 9]>
-      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-    <![endif]-->
+
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+ 
 </head>
 
 <body>
   <div class="page">
-    <div class="container">
+    
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              data-target="#navbar" aria-expanded="false">
               <span>Menu</span>
             </button>
             <a class="navbar-brand" href="#">Models</a>
           </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#home" class="act">Home</a></li>
               <li><a href="#about">About Us</a></li>
               <li><a href="#gallery">Gallery</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  aria-expanded="false">Dropdown<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#services">Services</a></li>
                   <li><a href="#blog">Blog</a></li>
@@ -58,7 +54,7 @@
           </div>
         </div>
       </nav>
-    </div>
+   
 
 
 
@@ -148,19 +144,19 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 col-xs-12">
             <span class="glyphicon glyphicon-eye-open"></span>
             <h4>Heading Here</h4>
             <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-4 col-xs-12">
             <span class="glyphicon glyphicon-gift"></span>
             <h4>Heading Here</h4>
             <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-4 col-xs-12">
             <span class="glyphicon glyphicon-heart-empty"></span>
             <h4>Heading Here</h4>
             <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
@@ -208,7 +204,7 @@
             <div class="posts-bottom">
               <h4>Sit accus antium</h4>
               <ul class="list-unstyled">
-                <li><a href="#"><i class="icon-thumbs-up"></i>20 Likes</a></li>
+                <li><a href=""><i class="icon-thumbs-up"></i>20 Likes</a></li>
                 <li><a href="#"><i class="icon-comments"></i>48 Comments</a></li>
               </ul>
               <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisnostrud
@@ -226,7 +222,7 @@
             <div class="posts-bottom">
               <h4>Sit accus antium</h4>
               <ul class="list-unstyled">
-                <li><a href="#"><i class="icon-thumbs-up"></i> 20 Likes</a></li>
+                <li><a href=""><i class="icon-thumbs-up"></i> 20 Likes</a></li>
                 <li><a href="#"><i class="icon-comments"></i>48 Comments</a></li>
               </ul>
               <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisnostrud
@@ -268,7 +264,7 @@
         <div class="row">
           <div class="col-md-4 col-sm-4">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            <button type="button" class="btn " data-toggle="modal" data-target="#myModal">
               <a href="#gallery">
                 <img class="img-fluid" src="./images/g1.jpg" alt="">
               </a>
@@ -277,7 +273,7 @@
 
           <div class="col-md-4 col-sm-4">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+            <button type="button" class="btn " data-toggle="modal" data-target="#myModal2">
               <a href="#gallery">
                 <img class="img-fluid" src="./images/g2.jpg" alt="">
               </a>
@@ -286,7 +282,7 @@
 
           <div class="col-md-4 col-sm-4">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal3">
+            <button type="button" class="btn " data-toggle="modal" data-target="#myModal3">
               <a href="#gallery">
                 <img class="img-fluid" src="./images/g3.jpg" alt="">
               </a>
@@ -295,7 +291,7 @@
 
           <div class="col-md-4 col-sm-4">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal4">
+            <button type="button" class="btn " data-toggle="modal" data-target="#myModal4">
               <a href="#gallery">
                 <img class="img-fluid" src="./images/g4.jpg" alt="">
               </a>
@@ -304,7 +300,7 @@
 
           <div class="col-md-4 col-sm-4">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal5">
+            <button type="button" class="btn " data-toggle="modal" data-target="#myModal5">
               <a href="#gallery">
                 <img class="img-fluid" src="./images/g5.jpg" alt="">
               </a>
@@ -313,7 +309,7 @@
 
           <div class="col-md-4 col-sm-4">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal6">
+            <button type="button" class="btn " data-toggle="modal" data-target="#myModal6">
               <a href="#gallery">
                 <img class="img-fluid" src="./images/g6.jpg" alt="">
               </a>
@@ -334,7 +330,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <img src="./images/g1.jpg" alt="">
+                  <img class="img-fluid" src="./images/g1.jpg" alt="">
                 </div>
 
               </div>
@@ -350,7 +346,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <img src="./images/g2.jpg" alt="">
+                  <img class="img-fluid" src="./images/g2.jpg" alt="">
                 </div>
 
               </div>
@@ -366,7 +362,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <img src="./images/g3.jpg" alt="">
+                  <img class="img-fluid" src="./images/g3.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -381,7 +377,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <img src="./images/g4.jpg" alt="">
+                  <img class="img-fluid" src="./images/g4.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -396,7 +392,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <img src="./images/g5.jpg" alt="">
+                  <img class="img-fluid" src="./images/g5.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -411,7 +407,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <img src="./images/g6.jpg" alt="">
+                  <img class="img-fluid" src="./images/g6.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -455,13 +451,13 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6 col-xs-12">
             <h3>WHO WE ARE</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
               rem aperiam, eaque ipsa quae.</p>
           </div>
 
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6 col-xs-12">
             <h3>WHO WE ARE</h3>
 
             <h4>Sed ut piciatis unde</h4>
@@ -471,7 +467,7 @@
             <h4>Sed ut piciatis unde</h4>
             <p>30 Sep 2018</p>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6 col-xs-12">
             <h3>WHO WE ARE</h3>
 
             <h4>Sed ut piciatis unde</h4>
@@ -481,7 +477,7 @@
             <h4>Sed ut piciatis unde</h4>
             <p>30 Sep 2018</p>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6 col-xs-12">
             <h3>Quick Links</h3>
             <ul>
               <li><a href="">Home</a></li>
@@ -498,57 +494,25 @@
 
       <div class="container foot">
         <div class="copy">
-          <a href="#"><img src="./images/move-top.png" alt=""></a>
+          <a href="#"><img class="ttop" src="./images/move-top.png" alt=""></a>
           <p>Copyright © 2019.Company name All rights reserved.More Templates <a href="">模板之家</a> - Collect from <a
               href=""> 网页模板</a></p>
         </div>
       </div>
 
-
-
-
     </footer>
-
-
-
-
-
-
-
-
-
-
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+ 
   <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+
+
+  <script>
+    $(".ttop").click(function(){
+      $("html,body").animate({scrollTop: 0},2000)
+    })
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #1d1d1d;
+    }
+
+    .page {
+      width: 500px;
+      margin: 100px auto;
+    }
+
+    audio {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      width: 500px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex: 1;
+
+      box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.8);
+    }
+
+    .mask {
+      width: 100%;
+      height: 100%;
+      background: #333;
+      background-image: url("img/c.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: blur(15px) brightness(1) contrast(1.2);
+      transform: scale(1.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+    }
+
+    .timg {
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      position: relative;
+      /* overflow: hidden; */
+    }
+
+    .timg img:nth-of-type(1) {
+      width: 100px;
+      height: 100px;
+      border: 30px solid #000;
+      border-radius: 50%;
+      margin: 20px 0;
+
+      animation-name: mycirle;
+      animation-timing-function: linear;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-play-state: paused;
+    }
+
+    .timg img:nth-of-type(2) {
+      width: 25px;
+      position: absolute;
+      right: 0px;
+      top: 20px;
+      transform: rotate(-10deg);
+      transform-origin: 14px 7px;
+    }
+
+    /* .timg:hover img:nth-of-type(1) {
+      animation-play-state: running;
+    }
+
+    .timg:hover img:nth-of-type(2) {
+      transform: rotate(15deg);
+    } */
+
+    .info {
+      color: #fff;
+      margin-left: 20px;
+    }
+
+    h4 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .controls {
+      margin-bottom: 20px;
+    }
+
+    .progress {
+      width: 100%;
+      height: 10px;
+      background-color: red;
+      position: relative;
+    }
+
+    input {
+      width: 100%;
+      opacity: 0;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .slider {
+      width: 40px;
+      height: 100%;
+      background-color: orange;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+    }
+
+    .list {
+      padding: 10px 0 10px 25px;
+      margin: 0;
+      list-style: none;
+      background-color: #000;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .list li {
+      margin-bottom: 10px;
+    }
+
+
+
+    .page.playing .card .timg .die{
+      animation-play-state: running;
+    }
+    .page.playing .card .timg .tie{
+      transform: rotate(15deg);
+    }
+
+    @keyframes mycirle {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+    <audio controls>
+      <source src="https://www.runoob.com/try/demo_source/horse.ogg" type="audio/ogg">
+    </audio>
+    <div class="card">
+      <div class="mask"></div>
+      <div class="timg">
+        <img class="die" src="./img/c.jpg" alt="">
+        <img class="tie" src="./img/cd_tou.png" alt="">
+      </div>
+      <div class="info">
+        <h4>Driving Home for Christmas</h4>
+        <p>Campsite Dream</p>
+        <div class="controls">
+          xxxxx
+        </div>
+        <div class="progress">
+          <input type="range" min="0" max="100" step="0.1">
+          <div class="slider"></div>
+        </div>
+      </div>
+    </div>
+    <ul class="list">
+
+    </ul>
+  </div>
+
+
+</body>
+
+</html>
+
+<script>
+  var playList = [
+    {
+      id: 169185,
+      name: "认真的雪",
+      artists: "薛之谦",
+      picUrl:
+        "https://p2.music.126.net/yWtj0UXRJBCT9YI7csmAcw==/109951164190741294.jpg",
+      playSrc: "https://music.163.com/song/media/outer/url?id=id.mp3",
+    },
+    {
+      id: 5253734,
+      name: "恋爱达人",
+      artists: "罗志祥",
+      picUrl:
+        "https://p1.music.126.net/n4YTVSO7QK1VRQMCEeOPqA==/80264348845281.jpg",
+      playSrc: "https://music.163.com/song/media/outer/url?id=id.mp3",
+    },
+    {
+      id: 277302,
+      name: "爱",
+      artists: "莫文蔚",
+      picUrl:
+        "https://p1.music.126.net/hcY73QYZt36DeGf91euboQ==/18921495602636668.jpg",
+      playSrc: "https://music.163.com/song/media/outer/url?id=id.mp3",
+    },
+  ];
+
+  var list = document.querySelector(".list")
+  playList.forEach(function (element, index) {
+    var node = document.createElement("li")
+    node.innerText = element.name
+    node.dataset.id = element.id
+
+    list.appendChild(node)
+
+    // 每个li点击切换歌曲
+    node.addEventListener("click", function () {
+      console.log(this.dataset.id)
+      // audio 路径替换
+      var songId = this.dataset.id
+
+      audio.src = "https://music.163.com/song/media/outer/url?id=" + songId + ".mp3"
+
+      // 根据id查找歌曲对象
+      var n = playList.filter(function (element, index) {
+        return element.id == songId
+      })
+
+      document.querySelector(".mask").style.backgroundImage = "url('" + n[0].picUrl + "')"
+      document.querySelector(".die").src = n[0].picUrl
+    })
+  })
+
+
+  var audio = document.querySelector("audio")
+  var progress = document.querySelector(".progress input")
+  var slider = document.querySelector(".progress .slider")
+
+
+  // 当指定音频/视频的时长数据发生变化时，会发生 durationchange 事件
+  audio.addEventListener("durationchange", function () {
+    console.log(audio.duration)
+    // 调整input最大值
+    progress.max = audio.duration
+  })
+
+  // 当目前的播放时间已更改时触发
+  audio.addEventListener("timeupdate", function () {
+    console.log(audio.currentTime);
+    // 调整input 当前位置
+    // progress.value = audio.currentTime
+
+    console.log("inputing", inputing)
+
+    if (inputing) {
+      return
+    }
+
+    // 调整slider 当前位置
+    slider.style.width = (audio.currentTime / audio.duration) * 100 + "%"
+
+  })
+
+  var inputing = false
+
+
+
+  // oninput 向 input 输入内容是执行事件
+  // input 输入 滑动滑块时
+  progress.addEventListener("input", function () {
+    inputing = true
+    console.log(this.value)
+
+    // 设置slider 滑块位置
+    slider.style.width = (this.value / this.max) * 100 + "%"
+  })
+
+
+  // onchange 当输入的值发生改变时
+  progress.addEventListener("change", function () {
+    // 设置 歌曲播放位置
+    audio.currentTime = this.value
+    inputing = false
+
+  })
+
+
+  var page = document.querySelector(".page")
+
+  // play() 方法开始播放当前的音频
+  // 通常与 pause() 方法一起使用 暂停
+  audio.addEventListener("play", function () {
+    page.classList.add("playing")
+  })
+
+  audio.addEventListener("pause", function () {
+    page.classList.remove("playing")
+  })
+
+</script>

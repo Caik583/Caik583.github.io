@@ -5,63 +5,85 @@
 .page {
   max-width: 100%;
 }
-.page .container .navbar {
+.page .navbar {
+  margin: 20px 50px;
   border: none;
   background-color: white;
 }
-.page .container .navbar .container-fluid {
+@media (max-width: 768px) {
+  .page .navbar {
+    margin: 10px 20px;
+  }
+}
+.page .navbar .container-fluid {
   max-width: 100%;
 }
-.page .container .navbar .container-fluid .navbar-header button {
+.page .navbar .container-fluid .navbar-header button {
   border: none;
 }
-.page .container .navbar .container-fluid .navbar-header button span {
+.page .navbar .container-fluid .navbar-header button span {
   border: none;
   font-size: 16px;
 }
-.page .container .navbar .container-fluid .navbar-header button:hover {
+.page .navbar .container-fluid .navbar-header button:hover {
   color: #FC427B;
   background: none;
 }
-.page .container .navbar .container-fluid .navbar-header a {
+.page .navbar .container-fluid .navbar-header a {
   color: #FC427B;
   font-size: 36px;
   text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
   font-family: 'Srisakdi', cursive;
   font-weight: 700;
 }
-.page .container .navbar .container-fluid .collapse {
-  float: right;
+.page .navbar .container-fluid #navbar {
+  text-align: center;
 }
 @media (max-width: 768px) {
-  .page .container .navbar .container-fluid .collapse {
-    width: 100%;
+  .page .navbar .container-fluid #navbar ul {
     text-align: center;
   }
 }
-.page .container .navbar .container-fluid .collapse .nav li a {
-  font-size: 14px;
+.page .navbar .container-fluid #navbar ul li a {
+  font-size: 14px ;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
 }
-.page .container .navbar .container-fluid .collapse .nav li a:hover {
+.page .navbar .container-fluid #navbar ul li a:hover {
   color: #FC427B;
 }
-.page .container .navbar .container-fluid .collapse .nav li a.act {
+.page .navbar .container-fluid #navbar ul li a.act {
   color: #FC427B !important;
 }
-.page .container .navbar .container-fluid .collapse .nav li.dropdown ul {
+@media (max-width: 767px) {
+  .page .navbar .container-fluid #navbar ul li a.act {
+    color: #686de0 !important;
+  }
+}
+.page .navbar .container-fluid #navbar ul li.dropdown ul {
   background-color: #333;
   padding: 10px;
   border-radius: 5px;
 }
-.page .container .navbar .container-fluid .collapse .nav li.dropdown ul li a {
+@media (max-width: 768px) {
+  .page .navbar .container-fluid #navbar ul li.dropdown ul {
+    background-color: #fff;
+  }
+}
+.page .navbar .container-fluid #navbar ul li.dropdown ul li a {
   color: white;
   font-size: 14px;
   padding: 5px 10px;
 }
-.page .container .navbar .container-fluid .collapse .nav li.dropdown ul li a:hover {
+.page .navbar .container-fluid #navbar ul li.dropdown ul li a:hover {
   color: #000;
+}
+@media (max-width: 768px) {
+  .page .navbar .container-fluid #navbar ul li.dropdown ul li a {
+    text-align: center;
+    background-color: #fff;
+    color: #777;
+  }
 }
 .page .carousel ol li {
   border-radius: 50%;
@@ -76,6 +98,15 @@
 .page .carousel ol li:hover {
   background: #fff;
 }
+.page .carousel .carousel-inner {
+  overflow: hidden;
+}
+@media (max-width: 441px) {
+  .page .carousel .carousel-inner .item {
+    width: 640px;
+    min-height: 340px;
+  }
+}
 .page .carousel .carousel-inner .item img {
   max-width: 100%;
 }
@@ -87,11 +118,29 @@
   max-width: 560px;
   font-family: 'Poppins', sans-serif;
 }
+@media (max-width: 441px) {
+  .page .carousel .carousel-inner .item .carousel-caption {
+    right: 0;
+    left: 0;
+    margin: 0 30px;
+    width: 300px;
+  }
+}
 .page .carousel .carousel-inner .item .carousel-caption h5 {
   color: #000;
   font-size: 22px;
   margin: 0 0 10px;
   text-transform: uppercase;
+}
+@media (max-width: 480px) {
+  .page .carousel .carousel-inner .item .carousel-caption h5 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 414px) {
+  .page .carousel .carousel-inner .item .carousel-caption h5 {
+    font-size: 18px;
+  }
 }
 .page .carousel .carousel-inner .item .carousel-caption h3 {
   font-size: 70px;
@@ -106,22 +155,22 @@
 }
 @media (max-width: 768px) {
   .page .carousel .carousel-inner .item .carousel-caption h3 {
-    font-size: 50px;
+    font-size: 45px;
   }
 }
 @media (max-width: 568px) {
   .page .carousel .carousel-inner .item .carousel-caption h3 {
-    font-size: 45px;
+    font-size: 40px;
   }
 }
 @media (max-width: 480px) {
   .page .carousel .carousel-inner .item .carousel-caption h3 {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 @media (max-width: 414px) {
   .page .carousel .carousel-inner .item .carousel-caption h3 {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 .page .carousel .carousel-inner .item .carousel-caption a {
@@ -141,6 +190,11 @@
 .page .carousel .carousel-inner .item .carousel-caption a:hover {
   background: #fff;
   color: #000;
+}
+@media (max-width: 480px) {
+  .page .carousel .carousel-inner .item .carousel-caption a {
+    padding: 8px 10px;
+  }
 }
 .page #about {
   padding-top: 60px;
@@ -250,7 +304,7 @@
   padding: 60px 0;
 }
 .page #services .container .row {
-  margin: 0 100px;
+  margin: 0 auto;
 }
 .page #services .container .row div {
   color: #fff;
@@ -351,7 +405,8 @@
 }
 .page section {
   background-image: url('../images/bg2.jpg');
-  background-repeat: no-repeat top;
+  background-repeat: no-repeat;
+  background-position: top;
   background-size: cover;
   font-size: 20px;
   padding: 60px 0;
@@ -362,6 +417,7 @@
 }
 .page section .container .row div {
   padding: 0 15px ;
+  margin-bottom: 60px;
 }
 .page section .container .row div span {
   font-size: 26px;
@@ -399,21 +455,26 @@
   font-size: 15px;
 }
 .page #gallery .container .row div {
+  padding: 15px;
   text-align: center;
 }
 .page #gallery .container .row div button {
   background: #fff;
-  border: none;
-}
-.page #gallery .container .row div button a img {
-  border: none;
+  border: none !important;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
 }
 .page #gallery .container .row div button:visited {
   border: none !important;
+  box-shadow: none;
 }
-.page #gallery .container .row div button.active:focus {
+.page #gallery .container .row div button:focus {
   border: none !important;
   box-shadow: none;
+}
+.page #gallery .container .row div button a img {
+  border: none;
 }
 .page #gallery .container .row .modal .modal-dialog .modal-content .modal-header button span {
   font-size: 30px;
@@ -423,12 +484,18 @@
   padding: 10px;
 }
 .page #gallery .container .row .modal .modal-dialog .modal-content .modal-body img {
-  margin: 0;
+  margin: 30px auto;
+  max-width: 80%;
+  height: auto;
 }
 .page footer {
   background-color: #212020;
   color: #fff;
   padding: 60px 0;
+}
+.page footer .container .row div {
+  text-align: center;
+  padding-bottom: 30px;
 }
 .page footer .container .row div h3 {
   margin-bottom: 60px;
@@ -458,8 +525,11 @@
   display: inline-block;
   color: #ababab;
 }
+.page footer .foot .copy {
+  text-align: center;
+}
 .page footer .foot .copy a {
-  max-width: 100%;
+  width: 100%;
 }
 .page footer .foot .copy a img {
   display: block;
